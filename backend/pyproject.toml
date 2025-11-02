@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tcginventory-backend"
+version = "0.1.0"
+description = "Backend service for the TCG inventory management tool"
+authors = [{name = "Sven"}]
+license = {text = "MIT"}
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi~=0.111",
+    "uvicorn[standard]~=0.30",
+    "sqlalchemy~=2.0",
+    "pydantic-settings~=2.5",
+    "python-dotenv~=1.0",
+    "alembic~=1.13",
+    "psycopg[binary]~=3.2",
+    "pandas~=2.2"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest~=8.3",
+    "httpx~=0.27",
+    "ruff~=0.6"
+]
+
+[tool.setuptools.packages.find]
+where = ["app"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP", "B", "SIM", "ASYNC"]
+ignore = ["N813"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
