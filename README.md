@@ -13,7 +13,7 @@ Dieses Repository enthält die Grundlagen für ein internes Werkzeug zur Verwalt
 ## Erste Schritte (Backend)
 
 1. Erstelle und aktiviere eine virtuelle Umgebung, installiere die Abhängigkeiten über `pip install -e .[dev]` innerhalb von `backend/`.
-2. Lege optional eine `.env` im Ordner `backend/` an, um Konfigurationen wie die Datenbank-URL (`TCGINV_DATABASE_URL`) zu überschreiben. Standard ist eine lokale SQLite-Datei `data/app.db`.
+2. Lege optional eine `.env` im Ordner `backend/` an (eine Vorlage findest du unter `backend/.env.example`), um Konfigurationen wie die Datenbank-URL (`TCGINV_DATABASE_URL`) zu überschreiben. Standard ist eine lokale SQLite-Datei `data/app.db`.
 3. Starte den Server mit:
 
    ```bash
